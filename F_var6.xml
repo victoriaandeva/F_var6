@@ -54,28 +54,37 @@
                           </block>
                         </value>
                         <next>
-                          <block type="variables_set" id="287" inline="true">
-                            <field name="VAR">one</field>
-                            <value name="VALUE">
-                              <block type="variables_get" id="307">
-                                <field name="VAR">two</field>
+                          <block type="oled_drawnumber" id="324" inline="true">
+                            <value name="NUMBER">
+                              <block type="variables_get" id="332">
+                                <field name="VAR">sum</field>
                               </block>
                             </value>
                             <next>
-                              <block type="variables_set" id="289" inline="true">
-                                <field name="VAR">two</field>
+                              <block type="variables_set" id="287" inline="true">
+                                <field name="VAR">one</field>
                                 <value name="VALUE">
-                                  <block type="variables_get" id="315">
-                                    <field name="VAR">sum</field>
+                                  <block type="variables_get" id="307">
+                                    <field name="VAR">two</field>
                                   </block>
                                 </value>
                                 <next>
-                                  <block type="robot_delay" id="292" inline="true">
-                                    <value name="DELAY">
-                                      <block type="math_number" id="299">
-                                        <field name="NUM">2000</field>
+                                  <block type="variables_set" id="289" inline="true">
+                                    <field name="VAR">two</field>
+                                    <value name="VALUE">
+                                      <block type="variables_get" id="315">
+                                        <field name="VAR">sum</field>
                                       </block>
                                     </value>
+                                    <next>
+                                      <block type="robot_delay" id="292" inline="true">
+                                        <value name="DELAY">
+                                          <block type="math_number" id="299">
+                                            <field name="NUM">2000</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </next>
                                   </block>
                                 </next>
                               </block>
