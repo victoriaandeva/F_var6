@@ -1,1 +1,96 @@
-<xml xmlns="http://www.w3.org/1999/xhtml"></xml>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="variables_set" id="17" inline="true" x="188" y="85">
+    <field name="VAR">one</field>
+    <value name="VALUE">
+      <block type="math_number" id="32">
+        <field name="NUM">1</field>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="25" inline="true">
+        <field name="VAR">two</field>
+        <value name="VALUE">
+          <block type="math_number" id="58">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+        <next>
+          <block type="controls_repeat" id="87" inline="true">
+            <value name="TIMES">
+              <block type="math_number" id="94">
+                <field name="NUM">12</field>
+              </block>
+            </value>
+            <statement name="DO">
+              <block type="variables_set" id="100" inline="true">
+                <field name="VAR">sum</field>
+                <value name="VALUE">
+                  <block type="math_arithmetic" id="161" inline="true">
+                    <field name="OP">ADD</field>
+                    <value name="A">
+                      <block type="variables_get" id="246">
+                        <field name="VAR">one</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="variables_get" id="196">
+                        <field name="VAR">two</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="oled_cleardisplay" id="255">
+                    <next>
+                      <block type="oled_setcursor" id="264" inline="true">
+                        <value name="STARTX">
+                          <block type="math_number" id="271">
+                            <field name="NUM">10</field>
+                          </block>
+                        </value>
+                        <value name="STARTY">
+                          <block type="math_number" id="278">
+                            <field name="NUM">10</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="variables_set" id="287" inline="true">
+                            <field name="VAR">one</field>
+                            <value name="VALUE">
+                              <block type="variables_get" id="307">
+                                <field name="VAR">two</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="variables_set" id="289" inline="true">
+                                <field name="VAR">two</field>
+                                <value name="VALUE">
+                                  <block type="variables_get" id="315">
+                                    <field name="VAR">sum</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="robot_delay" id="292" inline="true">
+                                    <value name="DELAY">
+                                      <block type="math_number" id="299">
+                                        <field name="NUM">2000</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
